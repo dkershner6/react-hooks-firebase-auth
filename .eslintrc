@@ -24,25 +24,5 @@
             "version": "detect"
         }
     },
-    "rules": {
-        "no-console": "warn",
-        "import/no-unassigned-import": 0,
-        "import/no-named-as-default-member": 0,
-        "import/no-extraneous-dependencies": 0,
-        "import/no-named-as-default": 0,
-        "no-unused-vars": 0,
-        "no-confusing-arrow": 0,
-        "react/react-in-jsx-scope": 0,
-        "react/prop-types": 0, // Disabled to prefer use of Typescript<Props>
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
-        "prettier/prettier": ["error", { "singleQuote": true }],
-        "@typescript-eslint/explicit-function-return-type": [
-            "warn",
-            { "allowExpressions": true }
-        ],
-        "@typescript-eslint/explicit-member-accessibility": "off",
-        "@typescript-eslint/no-empty-function": "off",
-        "@typescript-eslint/no-var-requires": "off"
-    }
+    "rules": {}
 }
