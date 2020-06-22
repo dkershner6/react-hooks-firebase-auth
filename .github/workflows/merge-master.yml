@@ -1,0 +1,26 @@
+name: Merging to Master
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  master-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Extract version
+        id: extract_version
+        uses: Saionaro/extract-package-version@v1.0.6
+      - name: Tag commit with updated version if merging
+        uses: tvdias/github-tagger@v0.0.1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          tag: "v${{ steps.extract_version.outputs.version }}"
