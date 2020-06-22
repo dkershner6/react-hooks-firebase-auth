@@ -1,14 +1,13 @@
-import { ReactElement } from 'react';
+import React from 'react';
 import EnforceFirebaseAuth from './EnforceFirebaseAuth';
 
-const withFirebaseAuth = (props: unknown) => (
-    WrappedComponent: (props: unknown) => ReactElement
-): ReactElement => {
-    return (
-        <EnforceFirebaseAuth>
-            <WrappedComponent {...props} />
-        </EnforceFirebaseAuth>
-    );
-};
+// eslint-disable-next-line @typescript-eslint/ban-types
+const withFirebaseAuth = <P extends object>(
+    Component: React.ComponentType<P>
+): React.FC<P> => ({ ...props }: P) => (
+    <EnforceFirebaseAuth>
+        <Component {...(props as P)} />
+    </EnforceFirebaseAuth>
+);
 
 export default withFirebaseAuth;
