@@ -4,16 +4,16 @@ module.exports = {
     transform: {
         '^.+\\.(ts|tsx)$': 'ts-jest'
     },
-    testPathIgnorePatterns: ['./.next/', './node_modules/'],
+    testPathIgnorePatterns: ['./node_modules/'],
     collectCoverage: true,
     collectCoverageFrom: ['src/**/*.{ts,tsx}'],
-    coveragePathIgnorePatterns: ['node_modules', 'resume', '/r/', 'Resume', 'cms', 'classes', 'pages', '.next'],
+    coveragePathIgnorePatterns: ['node_modules'],
     globals: {
         // we must specify a custom tsconfig for tests because we need the typescript transform
         // to transform jsx into js rather than leaving it jsx such as the next build requires.  you
         // can see this setting in tsconfig.jest.json -> "jsx": "react"
         'ts-jest': {
-            tsConfig: 'tsconfig.jest.json'
+            tsConfig: 'tsconfig.json'
         }
     }
 };

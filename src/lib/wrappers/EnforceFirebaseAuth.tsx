@@ -1,4 +1,4 @@
-import { ReactChild, ReactElement } from 'react';
+import React, { ReactChild, ReactElement } from 'react';
 import { useContainer } from 'unstated-next';
 import InternalFirebaseAuthContainer from '../containers/InternalFirebaseAuthContainer';
 import FirebaseAuthContainer from '../containers/FirebaseAuthContainer';

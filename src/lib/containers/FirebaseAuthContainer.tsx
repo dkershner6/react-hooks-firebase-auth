@@ -1,3 +1,4 @@
+import React from 'react';
 import { createContainer } from 'unstated-next';
 import { AuthStatus, AuthLoadingStatuses } from '../common/AuthStatus';
 import { useState, useCallback, useEffect } from 'react';
@@ -75,7 +76,6 @@ const useFirebaseAuthContainer = (
 
         if (redirectResult.user) {
             await handleRedirectResult(redirectResult);
-            return () => {};
         } else {
             return await subscribeToAuthChange();
         }

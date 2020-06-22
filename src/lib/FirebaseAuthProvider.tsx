@@ -1,3 +1,4 @@
+import React from 'react';
 import IFirebaseAuthProviderInputs from './IFirebaseAuthProvider';
 import InternalFirebaseAuthContainer from './containers/InternalFirebaseAuthContainer';
 import FirebaseAuthContainer from './containers/FirebaseAuthContainer';
