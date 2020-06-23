@@ -1,4 +1,4 @@
-# react-firebase-auth
+# react-hooks-firebase-auth
 
 Library for easy handling of Firebase Authentication, complete with provider token related events
 
@@ -41,7 +41,7 @@ And then for your main app file...
 
 ```typescript
 import { useContainer } from 'unstated-next';
-import { FirebaseAuthContainer } from 'react-firebase-auth';
+import { FirebaseAuthContainer } from 'react-hooks-firebase-auth';
 
 const Component = () => {
     const { user, token } = useContainer(FirebaseAuthContainer);
@@ -51,7 +51,7 @@ const Component = () => {
 ## Sample Auth Enforcement
 
 ```typescript
-import { EnforceFirebaseAuth } from 'react-firebase-auth';
+import { EnforceFirebaseAuth } from 'react-hooks-firebase-auth';
 
 const Component = () => {
     return (
@@ -65,7 +65,7 @@ const Component = () => {
 OR
 
 ```typescript
-import { withFirebaseAuth } from 'react-firebase-auth';
+import { withFirebaseAuth } from 'react-hooks-firebase-auth';
 
 const Component = () => {
     return <AnotherComponent />;
