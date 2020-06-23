@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-firebase-auth",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Library for easy handling of Firebase Authentication, complete with provider token related events",
   "main": "dist/index.js",
   "scripts": {
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dkershner6/react-firebase-auth.git"
+    "url": "git+https://github.com/dkershner6/react-hooks-firebase-auth.git"
   },
   "author": "Derek Kershner",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/dkershner6/react-firebase-auth/issues"
+    "url": "https://github.com/dkershner6/react-hooks-firebase-auth/issues"
   },
-  "homepage": "https://github.com/dkershner6/react-firebase-auth#readme",
+  "homepage": "https://github.com/dkershner6/react-hooks-firebase-auth#readme",
   "peerDependencies": {
     "react": "16.*",
     "firebase": "7.*"
