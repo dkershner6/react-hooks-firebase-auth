@@ -1,4 +1,4 @@
-name: Merging to Master
+name: Release and Publish
 
 on:
   push:
