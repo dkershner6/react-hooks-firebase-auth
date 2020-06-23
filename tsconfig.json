@@ -7,15 +7,22 @@
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "react",
     "downlevelIteration": true
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "coverage",
+    "jest.config.js"
+  ]
 }

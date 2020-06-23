@@ -1,10 +1,10 @@
 {
-  "name": "react-firebase-auth",
-  "version": "0.1.0",
+  "name": "react-hooks-firebase-auth",
+  "version": "0.1.1",
   "description": "Library for easy handling of Firebase Authentication, complete with provider token related events",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
     "format-check": "prettier --check .",
     "format": "prettier --write .",
     "test": "jest --coverage --passWithNoTests",
@@ -51,5 +51,8 @@
     "ts-jest": "^26.1.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
-  }
+  },
+  "files": [
+    "dist/*"
+  ]
 }
