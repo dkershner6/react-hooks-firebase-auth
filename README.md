@@ -2,7 +2,7 @@
 
 Library for easy handling of Firebase Authentication, complete with provider token related events
 
-![NPM Publish](https://github.com/dkershner6/react-hooks-firebase-auth/workflows/Merging%20to%20Master/badge.svg)
+![NPM Publish](https://github.com/dkershner6/react-hooks-firebase-auth/workflows/Publish%20and%20Release/badge.svg)
 
 ## Sample Provider Use
 
