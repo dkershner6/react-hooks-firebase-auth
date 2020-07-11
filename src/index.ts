@@ -10,3 +10,9 @@ export { default as EnforceFirebaseAuth } from './lib/wrappers/EnforceFirebaseAu
 export type { IEnforceFirebaseAuth } from './lib/wrappers/EnforceFirebaseAuth';
 
 export { default as withFirebaseAuth } from './lib/wrappers/withFirebaseAuth';
+
+export {
+    default as MockFirebaseAuth,
+    MOCK_AUTH_STATE_CHANGE_USER,
+    MOCK_REDIRECT_RESULT
+} from './tests/mockFirebaseAuth';

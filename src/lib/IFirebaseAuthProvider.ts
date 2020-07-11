@@ -6,7 +6,7 @@ export default interface IFirebaseAuthProviderInputs {
     /** Unique string to identify app in local storage */
     appName: string;
     /** Firebase with at least firebase/auth imported */
-    firebase: typeof firebase;
+    firebaseAuth: firebase.auth.Auth;
     /** Component with a sign in button */
     loginComponent: ReactElement;
     /** Loading component before the redirect */

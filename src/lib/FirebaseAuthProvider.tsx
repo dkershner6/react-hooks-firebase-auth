@@ -9,7 +9,7 @@ const FirebaseAuthProvider = (
 ): ReactElement => {
     const {
         appName,
-        firebase,
+        firebaseAuth,
         onLogout,
         onNewLoginSuccess,
         onNewLoginError,
@@ -20,7 +20,7 @@ const FirebaseAuthProvider = (
     const externalInitialState = {
         ...initialState,
         appName,
-        firebase,
+        firebaseAuth,
         onLogout,
         onNewLoginSuccess,
         onNewLoginError,
