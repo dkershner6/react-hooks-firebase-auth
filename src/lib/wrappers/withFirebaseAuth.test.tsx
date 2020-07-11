@@ -21,7 +21,7 @@ describe('withFirebaseAuth', () => {
         render(
             <FirebaseAuthProvider
                 appName="test"
-                firebase={firebase}
+                firebaseAuth={firebase.auth()}
                 loadingComponent={<p />}
                 errorComponent={<p />}
                 loginComponent={<p />}

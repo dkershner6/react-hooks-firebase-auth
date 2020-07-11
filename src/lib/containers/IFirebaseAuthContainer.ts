@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from 'react';
 import firebase from 'firebase';
 
 export interface IFirebaseAuthContainerRequiredInitialState {
-    firebase: typeof firebase;
+    firebaseAuth: firebase.auth.Auth;
     appName: string;
 
     /** For provider token sensitive applications, this allows for saving in a DB */

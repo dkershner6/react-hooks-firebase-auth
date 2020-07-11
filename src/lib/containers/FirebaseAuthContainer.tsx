@@ -14,7 +14,7 @@ const useFirebaseAuthContainer = (
 ): IFirebaseAuthContainer => {
     const {
         appName,
-        firebase,
+        firebaseAuth,
         onReceiveToken,
         onNewLoginSuccess,
         onNewLoginError,
@@ -54,7 +54,7 @@ const useFirebaseAuthContainer = (
     );
 
     const subscribeToAuthChange = useCallback((): firebase.Unsubscribe => {
-        return firebase.auth().onAuthStateChanged(async (newUser) => {
+        return firebaseAuth.onAuthStateChanged(async (newUser) => {
             if (newUser) {
                 setUser(newUser);
 
@@ -67,19 +67,19 @@ const useFirebaseAuthContainer = (
                 setAuthStatus(AuthStatus.LOGGED_OUT);
             }
         });
-    }, [firebase, onOldLoginRetrieval]);
+    }, [firebaseAuth, onOldLoginRetrieval]);
 
     const handleInitialPageLoad = useCallback(async (): Promise<
         firebase.Unsubscribe
     > => {
-        const redirectResult = await firebase.auth().getRedirectResult();
+        const redirectResult = await firebaseAuth.getRedirectResult();
 
         if (redirectResult.user) {
             await handleRedirectResult(redirectResult);
         } else {
             return await subscribeToAuthChange();
         }
-    }, [firebase, handleRedirectResult, subscribeToAuthChange]);
+    }, [firebaseAuth, handleRedirectResult, subscribeToAuthChange]);
 
     useEffect(() => {
         if (AuthLoadingStatuses.includes(authStatus)) {
@@ -97,19 +97,19 @@ const useFirebaseAuthContainer = (
                 setAuthStatus(AuthStatus.LOGGING_IN);
                 if (context) setContext(context);
 
-                await firebase.auth().signInWithRedirect(provider);
+                await firebaseAuth.signInWithRedirect(provider);
             } catch (error) {
                 if (onNewLoginError) onNewLoginError(error);
             }
         },
-        [firebase, onNewLoginError, setContext]
+        [firebaseAuth, onNewLoginError, setContext]
     );
 
     const logout = useCallback(async () => {
         try {
             setAuthStatus(AuthStatus.LOGGING_OUT);
 
-            await firebase.auth().signOut();
+            await firebaseAuth.signOut();
             setToken(null);
             setUser(null);
             if (onLogout) await onLogout();
@@ -118,7 +118,7 @@ const useFirebaseAuthContainer = (
             // eslint-disable-next-line no-console
             console.log(error);
         }
-    }, [firebase, onLogout]);
+    }, [firebaseAuth, onLogout]);
 
     return {
         authStatus,
