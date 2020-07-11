@@ -22,6 +22,7 @@ const EnforceFirebaseAuth = ({
             return errorComponent;
         case AuthStatus.INITIAL:
         case AuthStatus.LOGGING_IN:
+        case AuthStatus.LOGGING_OUT:
             return loadingComponent;
         case AuthStatus.LOGGED_OUT:
             return loginComponent;

@@ -74,7 +74,7 @@ const useFirebaseAuthContainer = (
     > => {
         const redirectResult = await firebaseAuth.getRedirectResult();
 
-        if (redirectResult.user) {
+        if (redirectResult?.user) {
             await handleRedirectResult(redirectResult);
         } else {
             return await subscribeToAuthChange();

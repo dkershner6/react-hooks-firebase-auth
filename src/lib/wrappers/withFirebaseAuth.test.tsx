@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react';
-import firebase from 'firebase';
 
 import { render } from '@testing-library/react';
 
 import withFirebaseAuth from './withFirebaseAuth';
 import FirebaseAuthProvider from '../FirebaseAuthProvider';
 import { AuthStatus } from '../common/AuthStatus';
+import mockFirebaseAuth from '../../tests/mockFirebaseAuth';
 
 describe('withFirebaseAuth', () => {
     const TestComponent = (): ReactElement => {
@@ -17,11 +17,10 @@ describe('withFirebaseAuth', () => {
     it('Should allow a component to be wrapped properly', () => {
         const onNewLoginSuccess = jest.fn();
         const onLogout = jest.fn();
-        firebase.initializeApp({});
         render(
             <FirebaseAuthProvider
                 appName="test"
-                firebaseAuth={firebase.auth()}
+                firebaseAuth={mockFirebaseAuth()}
                 loadingComponent={<p />}
                 errorComponent={<p />}
                 loginComponent={<p />}
