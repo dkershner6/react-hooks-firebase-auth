@@ -5,7 +5,7 @@ import { render } from '@testing-library/react';
 import withFirebaseAuth from './withFirebaseAuth';
 import FirebaseAuthProvider from '../FirebaseAuthProvider';
 import { AuthStatus } from '../common/AuthStatus';
-import mockFirebaseAuth from '../../tests/mockFirebaseAuth';
+import mockFirebaseAuth from 'mock-react-hooks-firebase-auth';
 
 describe('withFirebaseAuth', () => {
     const TestComponent = (): ReactElement => {
