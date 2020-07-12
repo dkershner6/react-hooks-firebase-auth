@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-firebase-auth",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Library for easy handling of Firebase Authentication, complete with provider token related events",
   "main": "dist/index.js",
   "scripts": {
@@ -44,6 +44,7 @@
     "eslint-plugin-react-hooks": "^4.0.4",
     "firebase": "^7.15.4",
     "jest": "^26.0.1",
+    "mock-react-hooks-firebase-auth": "^1.0.2",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

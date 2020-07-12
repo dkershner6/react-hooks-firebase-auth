@@ -6,7 +6,7 @@ import FirebaseAuthProvider from './FirebaseAuthProvider';
 import mockFirebaseAuth, {
     MOCK_REDIRECT_RESULT,
     MOCK_AUTH_STATE_CHANGE_USER
-} from '../tests/mockFirebaseAuth';
+} from 'mock-react-hooks-firebase-auth';
 import { AuthStatus } from './common/AuthStatus';
 import { useContainer } from 'unstated-next';
 import FirebaseAuthContainer from './containers/FirebaseAuthContainer';

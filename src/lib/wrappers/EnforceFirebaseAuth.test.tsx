@@ -5,7 +5,7 @@ import EnforceFirebaseAuth from './EnforceFirebaseAuth';
 import InternalFirebaseAuthContainer from '../containers/InternalFirebaseAuthContainer';
 import FirebaseAuthContainer from '../containers/FirebaseAuthContainer';
 import { AuthStatus } from '../common/AuthStatus';
-import mockFirebaseAuth from '../../tests/mockFirebaseAuth';
+import mockFirebaseAuth from 'mock-react-hooks-firebase-auth';
 
 describe('EnforceFirebaseAuth', () => {
     const TestWrapper = ({ children, authStatus }: any) => (
