@@ -1,5 +1,7 @@
 # react-hooks-firebase-auth
 
+Archived: I don't use Firebase anymore, but will leave this here in case it has value.
+
 Library for easy handling of Firebase Authentication, complete with provider token related events
 
 ![Release and Publish](https://github.com/dkershner6/react-hooks-firebase-auth/workflows/Release%20and%20Publish/badge.svg)
